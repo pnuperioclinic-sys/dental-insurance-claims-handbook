@@ -1,0 +1,870 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="압도적 1등을 만드는 병원 기획의 정석 - 치과 직원용 요약 노트. 브랜딩, 신환 유입, 방문 경험, 조직, 성과 관리">
+<style>:root{color-scheme:light dark}html,body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>압도적 1등 병원 기획 노트</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=Noto+Sans+KR:wght@300;400;500;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+
+<style>
+  :root {
+    --ground: #F4F6F4;
+    --surface: #FFFFFF;
+    --surface-2: #ECF0EE;
+    --ink: #0F1A1C;
+    --ink-2: #33454A;
+    --muted: #64777B;
+    --rule: #D8E0DC;
+    --rule-strong: #B6C4BF;
+    --accent: #0B6E63;
+    --accent-ink: #075049;
+    --accent-soft: #DCEBE7;
+    --warn: #A9501F;
+    --warn-soft: #F4E6DB;
+    --shadow: 0 1px 2px rgba(15, 26, 28, .05), 0 8px 24px -16px rgba(15, 26, 28, .22);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground: #0D1414;
+      --surface: #141D1D;
+      --surface-2: #1B2626;
+      --ink: #E7EDEA;
+      --ink-2: #BCCAC6;
+      --muted: #8A9C98;
+      --rule: #273434;
+      --rule-strong: #3A4B4A;
+      --accent: #58C4B2;
+      --accent-ink: #8FDACD;
+      --accent-soft: #16302D;
+      --warn: #D9925F;
+      --warn-soft: #2E2119;
+      --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 10px 28px -18px rgba(0, 0, 0, .8);
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --ground: #0D1414;
+    --surface: #141D1D;
+    --surface-2: #1B2626;
+    --ink: #E7EDEA;
+    --ink-2: #BCCAC6;
+    --muted: #8A9C98;
+    --rule: #273434;
+    --rule-strong: #3A4B4A;
+    --accent: #58C4B2;
+    --accent-ink: #8FDACD;
+    --accent-soft: #16302D;
+    --warn: #D9925F;
+    --warn-soft: #2E2119;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 10px 28px -18px rgba(0, 0, 0, .8);
+  }
+
+  body {
+    background: var(--ground);
+    color: var(--ink);
+    font-family: "Noto Sans KR", "Malgun Gothic", system-ui, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.78;
+    letter-spacing: -.005em;
+    word-break: keep-all;
+  }
+
+  .wrap {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 0 24px 96px;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: "IBM Plex Sans KR", "Noto Sans KR", system-ui, sans-serif;
+    text-wrap: balance;
+    line-height: 1.35;
+    letter-spacing: -.025em;
+  }
+
+  em {
+    font-style: normal;
+    font-weight: 700;
+    color: var(--accent-ink);
+    box-shadow: inset 0 -.42em 0 var(--accent-soft);
+  }
+
+  .thesis em {
+    box-shadow: inset 0 -.4em 0 rgba(11, 110, 99, .16);
+  }
+
+  .mono {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .eyebrow {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 11.5px;
+    font-weight: 500;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  /* ---------- masthead ---------- */
+
+  .masthead {
+    padding: 56px 0 36px;
+    border-bottom: 2px solid var(--ink);
+  }
+
+  .masthead h1 {
+    font-size: clamp(30px, 5.4vw, 46px);
+    font-weight: 700;
+    margin: 14px 0 0;
+  }
+
+  .masthead .sub {
+    font-size: clamp(15px, 2.2vw, 17px);
+    color: var(--ink-2);
+    margin: 14px 0 0;
+    max-width: 40em;
+  }
+
+  .bookline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 18px;
+    margin: 26px 0 0;
+    padding: 14px 0 0;
+    border-top: 1px solid var(--rule);
+    font-size: 13.5px;
+    color: var(--muted);
+  }
+
+  .bookline b {
+    color: var(--ink-2);
+    font-weight: 500;
+  }
+
+  /* ---------- thesis ---------- */
+
+  .thesis {
+    margin: 40px 0 0;
+    padding: 26px 28px;
+    background: var(--accent-soft);
+    border-left: 3px solid var(--accent);
+    border-radius: 0 4px 4px 0;
+  }
+
+  .thesis p {
+    margin: 0;
+    font-family: "IBM Plex Sans KR", "Noto Sans KR", sans-serif;
+    font-size: clamp(18px, 2.8vw, 21px);
+    font-weight: 600;
+    line-height: 1.6;
+    letter-spacing: -.02em;
+    color: var(--accent-ink);
+  }
+
+  .thesis .after {
+    margin-top: 12px;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--ink-2);
+    line-height: 1.75;
+  }
+
+  /* ---------- generic section ---------- */
+
+  section {
+    margin-top: 64px;
+  }
+
+  .sec-head {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--rule-strong);
+    margin-bottom: 26px;
+  }
+
+  .sec-head h2 {
+    font-size: clamp(20px, 3.2vw, 25px);
+    font-weight: 700;
+    margin: 0;
+    flex: 1;
+  }
+
+  .lede {
+    color: var(--ink-2);
+    margin: -6px 0 26px;
+    max-width: 42em;
+  }
+
+  /* ---------- journey ---------- */
+
+  .journey {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 2px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .stage {
+    background: var(--surface);
+    padding: 18px 16px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+
+  .stage .n {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .1em;
+    color: var(--accent);
+  }
+
+  .stage strong {
+    font-family: "IBM Plex Sans KR", sans-serif;
+    font-size: 15.5px;
+    font-weight: 600;
+    letter-spacing: -.02em;
+  }
+
+  .stage span {
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--muted);
+  }
+
+  /* ---------- chapters ---------- */
+
+  .chapter {
+    display: grid;
+    grid-template-columns: 62px 1fr;
+    gap: 0 22px;
+    padding: 30px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .chapter:first-of-type {
+    padding-top: 6px;
+  }
+
+  .ch-num {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: .04em;
+    padding-top: 6px;
+  }
+
+  .ch-body h3 {
+    font-size: clamp(18px, 2.8vw, 21px);
+    font-weight: 700;
+    margin: 0 0 12px;
+  }
+
+  .ch-body p {
+    margin: 0 0 14px;
+    color: var(--ink-2);
+  }
+
+  .pull {
+    margin: 0 0 16px;
+    padding: 0 0 0 16px;
+    border-left: 2px solid var(--rule-strong);
+    font-family: "IBM Plex Sans KR", sans-serif;
+    font-size: 16.5px;
+    font-weight: 500;
+    line-height: 1.7;
+    letter-spacing: -.02em;
+    color: var(--ink);
+  }
+
+  .pull cite {
+    display: block;
+    margin-top: 7px;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11.5px;
+    font-style: normal;
+    letter-spacing: .05em;
+    color: var(--muted);
+  }
+
+  ul.pts {
+    margin: 0 0 16px;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+  }
+
+  ul.pts li {
+    position: relative;
+    padding-left: 17px;
+    color: var(--ink-2);
+    font-size: 15.5px;
+    line-height: 1.72;
+  }
+
+  ul.pts li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: .72em;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+
+  ul.pts li b {
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  .doing {
+    margin: 18px 0 0;
+    padding: 15px 18px;
+    background: var(--surface-2);
+    border-radius: 4px;
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: var(--ink-2);
+  }
+
+  .doing .tag {
+    display: block;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .13em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 6px;
+  }
+
+  .doing b {
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  .breaks {
+    background: var(--warn-soft);
+  }
+
+  .breaks .tag {
+    color: var(--warn);
+  }
+
+  /* ---------- frameworks ---------- */
+
+  .fw-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 18px;
+  }
+
+  .fw {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 5px;
+    padding: 20px 20px 22px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .fw h4 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+    display: flex;
+    align-items: baseline;
+    gap: 9px;
+  }
+
+  .fw h4 .code {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .04em;
+    color: var(--accent);
+    background: var(--accent-soft);
+    padding: 2px 7px;
+    border-radius: 3px;
+  }
+
+  .fw p {
+    margin: 0;
+    font-size: 14.5px;
+    line-height: 1.7;
+    color: var(--ink-2);
+  }
+
+  .steps {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin: 2px 0 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: s;
+  }
+
+  .steps li {
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    gap: 9px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--ink-2);
+  }
+
+  .steps li::before {
+    counter-increment: s;
+    content: counter(s);
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--muted);
+    border: 1px solid var(--rule-strong);
+    border-radius: 50%;
+    width: 19px;
+    height: 19px;
+    display: grid;
+    place-items: center;
+    margin-top: 2px;
+  }
+
+  .steps li b {
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  /* ---------- role table ---------- */
+
+  .table-scroll {
+    overflow-x: auto;
+    border: 1px solid var(--rule);
+    border-radius: 5px;
+    background: var(--surface);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 620px;
+    font-size: 14.5px;
+  }
+
+  th, td {
+    text-align: left;
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--rule);
+    vertical-align: top;
+    line-height: 1.65;
+  }
+
+  thead th {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    background: var(--surface-2);
+    white-space: nowrap;
+  }
+
+  tbody th {
+    font-family: "IBM Plex Sans KR", sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: var(--ink);
+    white-space: nowrap;
+    width: 1%;
+  }
+
+  tbody td {
+    color: var(--ink-2);
+  }
+
+  tbody tr:last-child th,
+  tbody tr:last-child td {
+    border-bottom: none;
+  }
+
+  /* ---------- checklist ---------- */
+
+  .checks {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 1px;
+    background: var(--rule);
+    border: 1px solid var(--rule);
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  .checks li {
+    background: var(--surface);
+    padding: 15px 18px;
+    display: grid;
+    grid-template-columns: 22px 1fr;
+    gap: 13px;
+    align-items: start;
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--ink-2);
+  }
+
+  .checks li::before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    margin-top: 6px;
+    border: 1.5px solid var(--rule-strong);
+    border-radius: 3px;
+  }
+
+  .checks li b {
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  /* ---------- note ---------- */
+
+  .note {
+    margin-top: 64px;
+    padding: 20px 22px;
+    border: 1px dashed var(--rule-strong);
+    border-radius: 5px;
+    font-size: 13.5px;
+    line-height: 1.75;
+    color: var(--muted);
+  }
+
+  .note b {
+    color: var(--ink-2);
+    font-weight: 500;
+  }
+
+  .note a {
+    color: var(--accent);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+  }
+
+  a:focus-visible,
+  li:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+
+  @media (max-width: 560px) {
+    .chapter {
+      grid-template-columns: 1fr;
+      gap: 8px;
+    }
+    .ch-num {
+      padding-top: 0;
+    }
+  }
+</style>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <div class="eyebrow">직원 공유용 · 책 요약 노트</div>
+    <h1>압도적 1등 병원은 <br>무엇을 다르게 기획하는가</h1>
+    <p class="sub">이정숙 대표의 《압도적 1등을 만드는 병원 기획의 정석》을 우리 데스크·진료실·상담실 언어로 옮긴 요약본입니다. 읽는 데 10분, 적용하는 데 이번 주면 됩니다.</p>
+    <div class="bookline">
+      <span><b>지은이</b> 이정숙 (병원경영기획 컨설팅 '기획공장' 대표)</span>
+      <span><b>펴낸곳</b> 해뜰서가</span>
+      <span class="mono"><b>초판</b> 2026.02</span>
+    </div>
+  </header>
+
+  <div class="thesis">
+    <p>“병원은 진료 이전에 <em>선택받는 구조</em>를 먼저 만들어야 한다.”</p>
+    <p class="after">이 책 전체를 한 문장으로 줄이면 이렇습니다. 실력이 좋은데도 성장이 멈춘 병원은 대개 실력이 모자란 게 아니라, 고객이 우리를 <b>알게 되고 → 고르고 → 겪고 → 다시 오는</b> 과정이 설계되어 있지 않은 겁니다. 저자는 그 과정을 다섯 단계로 나눠, 각 단계에서 누가 무엇을 해야 하는지를 워크시트 수준까지 내려서 설명합니다.</p>
+  </div>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">01</span>
+      <h2>책의 뼈대 — 고객이 지나가는 다섯 구간</h2>
+    </div>
+    <p class="lede">챕터 번호가 곧 고객이 우리를 겪는 순서입니다. 앞 구간이 무너지면 뒤 구간은 기회조차 오지 않습니다.</p>
+    <div class="journey">
+      <div class="stage">
+        <span class="n">CH 1</span>
+        <strong>브랜딩</strong>
+        <span>우리는 어떤 병원으로 기억되고 싶은가</span>
+      </div>
+      <div class="stage">
+        <span class="n">CH 2</span>
+        <strong>신환 유입</strong>
+        <span>어떻게 알게 되고 예약까지 오는가</span>
+      </div>
+      <div class="stage">
+        <span class="n">CH 3</span>
+        <strong>방문 경험</strong>
+        <span>접수부터 수납·사후관리까지</span>
+      </div>
+      <div class="stage">
+        <span class="n">CH 4</span>
+        <strong>직원·조직</strong>
+        <span>그 경험을 만드는 사람들</span>
+      </div>
+      <div class="stage">
+        <span class="n">CH 5</span>
+        <strong>성과 관리</strong>
+        <span>잘되고 있는지 숫자로 확인</span>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">02</span>
+      <h2>챕터별 핵심과 우리 적용점</h2>
+    </div>
+
+    <article class="chapter">
+      <div class="ch-num">CH 1</div>
+      <div class="ch-body">
+        <h3>‘온리원’으로 자리 잡는 병원 브랜딩</h3>
+        <blockquote class="pull">
+          환자는 치료받아야 하는 사람이라는 <em>수동성</em>을, 고객은 대가를 지불하고 가치를 경험하며 선택권과 목소리를 가진 사람이라는 <em>능동성</em>을 담고 있다.
+          <cite>본문 p.28 요지</cite>
+        </blockquote>
+        <p>책의 출발점은 호칭 하나를 바꾸는 겁니다. ‘환자’로 보면 우리는 공급자고 상대는 수요자일 뿐이지만, ‘고객’으로 보면 그분은 <b>우리를 고를 수도, 다른 곳을 고를 수도 있는 사람</b>이 됩니다. 이 관점 전환이 안 되면 뒤의 모든 챕터가 남의 얘기가 됩니다.</p>
+        <ul class="pts">
+          <li><b>브랜딩은 로고가 아니라 일관성입니다.</b> 따뜻한 인테리어에 차가운 말투가 얹히면 브랜드는 그 자리에서 무너집니다.</li>
+          <li><b>실력은 태도를 덮지 못합니다.</b> “수술은 잘하는데 불친절한 병원”이라는 이미지는 한번 굳으면 오래갑니다. 태도도 경쟁력입니다.</li>
+          <li><b>‘어정쩡한 친절’이 가장 위험합니다.</b> 영혼 없는 기계적 응대는 안 한 것보다 나쁜 기억을 남깁니다.</li>
+          <li><b>넘버원 고객에만 기대면 성장이 막힙니다.</b> 방문 빈도는 낮지만 만족도와 객단가가 높은 그룹을 따로 들여다보라고 권합니다.</li>
+        </ul>
+        <div class="doing">
+          <span class="tag">우리 병원에서는</span>
+          BI·CI를 만드는 순서가 그대로 개인·팀에도 적용됩니다. <b>① 철학과 고객 정의 → ② 이름 짓기 → ③ 로고·컬러 → ④ 안내물·게시물 디자인 → ⑤ 응대법·말투·톤앤매너.</b> ⑤번까지 같은 결로 맞춰야 비로소 브랜드입니다. 안내문은 예쁜데 전화 응대가 따로 놀면 ①~④가 무의미해집니다.
+        </div>
+      </div>
+    </article>
+
+    <article class="chapter">
+      <div class="ch-num">CH 2</div>
+      <div class="ch-body">
+        <h3>고객이 밀려온다 — 신환 두 배 유입 설계</h3>
+        <blockquote class="pull">
+          사람은 제품 자체를 사지 않는다. 제품이 만들어주는 <em>경험</em>을 산다.
+          <cite>본문 p.78 요지</cite>
+        </blockquote>
+        <p>유입은 운이 아니라 설계라는 게 이 챕터의 주장입니다. 광고비를 늘린다고 신환이 느는 게 아니라, <b>“왜 하필 이 병원이어야 하는가”</b>에 대한 답이 채널마다 같은 목소리로 놓여 있어야 늘어납니다.</p>
+        <ul class="pts">
+          <li><b>고객의 실제 동선은 옴니채널입니다.</b> 블로그·리뷰에서 정보를 찾고, 카톡이나 네이버로 예약합니다. 정보 탐색 지점과 예약 지점이 다르다는 걸 전제로 설계해야 합니다.</li>
+          <li><b>지금은 리뷰가 첫인상입니다.</b> 다만 리뷰로 끌어와도 본질이 없으면 한 번으로 끝납니다. 저자가 경계하는 건 ‘리뷰는 수천 개인데 다시 갈 마음은 안 드는 가게’입니다.</li>
+          <li><b>특징을 혜택으로 번역하세요.</b> 장비 이름·스펙은 특징이고, “그래서 나한테 뭐가 좋은데?”에 답한 문장이 혜택입니다. 고객은 장비를 보러 오는 게 아니라 <b>더 정확하고 안전한 치료 경험</b>을 사러 옵니다.</li>
+        </ul>
+        <div class="doing breaks">
+          <span class="tag">흔히 무너지는 지점</span>
+          <b>“3D CT 보유”</b>는 특징입니다. <b>“한 번 찍으면 신경 위치까지 보여서, 발치 중에 갑자기 계획이 바뀌는 일이 거의 없습니다”</b>가 혜택입니다. 상담 스크립트·블로그·원내 안내문에서 특징만 나열된 문장을 찾아 전부 혜택 문장으로 바꿔 보세요.
+        </div>
+      </div>
+    </article>
+
+    <article class="chapter">
+      <div class="ch-num">CH 3</div>
+      <div class="ch-body">
+        <h3>남다른 가치를 만드는 방문 경험 설계</h3>
+        <blockquote class="pull">
+          고객은 자신이 존중받고 있다고 느낄 때, 수동적으로 치료받는 존재에서 <em>능동적으로 선택하는 존재</em>로 바뀐다.
+          <cite>본문 p.117 요지</cite>
+        </blockquote>
+        <p>접수 · 대기 · 상담 · 진료 · 수납 · 사후관리 — 고객은 이 전부를 <b>하나의 경험</b>으로 기억합니다. 치료 결과만 기억하는 게 아니라 기다리는 시간이 편안했는지, 설명이 이해됐는지를 같이 기억합니다.</p>
+        <ul class="pts">
+          <li><b>설명에는 순서가 있습니다.</b> 저자는 치료계획 설명을 4W 프레임워크로 정리합니다(아래 섹션 참고). 동의율은 말솜씨가 아니라 설명 구조에서 나옵니다.</li>
+          <li><b>VOC는 모으는 게 아니라 순위를 매기는 겁니다.</b> ① 자주 생기는 문제, ② 위험이 큰 문제를 먼저 처리합니다. 이 기준이 없으면 목소리 큰 불만만 처리하게 됩니다.</li>
+          <li><b>CRM은 실장 개인기가 아니라 병원 인프라입니다.</b> 인원이 적어도 리콜·해피콜·미내원 관리 기준을 정해 두면 그게 곧 성장 곡선이 됩니다.</li>
+        </ul>
+        <div class="doing">
+          <span class="tag">우리 병원에서는</span>
+          사후관리가 재방문의 무기입니다. 시술 후 <b>집에서 할 일을 구체적으로 안내</b>하고, 다음 예약 전까지 <b>증상 변화를 체크</b>해 주는 것만으로도 “여기는 끝까지 봐준다”는 인식이 생깁니다.
+        </div>
+      </div>
+    </article>
+
+    <article class="chapter">
+      <div class="ch-num">CH 4</div>
+      <div class="ch-body">
+        <h3>직원이 웃을수록 병원이 성장한다</h3>
+        <blockquote class="pull">
+          조직이 먼저 기준을 제시할 때 구성원은 혼란 없이 방향을 잡는다. 생각은 <em>먼저 심는 쪽</em>이 주도권을 가진다.
+          <cite>본문 p.199 요지</cite>
+        </blockquote>
+        <p>공들여 만든 브랜드는 광고가 아니라 <b>직원의 표정과 말투에서</b> 무너집니다. 그래서 이 챕터는 서비스 교육이 아니라 조직 얘기를 합니다.</p>
+        <ul class="pts">
+          <li><b>기준이 없으면 ‘기존 직원의 방식’이 기준이 됩니다.</b> 신입은 매뉴얼이 아니라 옆자리를 보고 배웁니다. 기준을 병원이 먼저 제시해야 하는 이유입니다.</li>
+          <li><b>할인·예외는 기분이 아니라 규정으로.</b> 상담 할인 기준이 그날 컨디션에 따라 달라지면 팀은 눈치를 보기 시작합니다.</li>
+          <li><b>마이크로매니징은 비용입니다.</b> 실수에 과민 반응하고 일일이 방향을 고치면 직원은 위축되고 수동적으로 변하며, 그 끝은 퇴사율·이직률 상승입니다.</li>
+          <li><b>일하고 싶은 병원이 선택하고 싶은 병원을 만듭니다.</b> 지치고 불만이 쌓인 상태는 고스란히 고객을 향한 손끝과 말투로 전달됩니다.</li>
+        </ul>
+        <div class="doing breaks">
+          <span class="tag">리더에게</span>
+          단순히 공감만 해주는 리더는 갈대가 됩니다. 필요한 건 위로가 아니라 <b>명확한 선</b>입니다. “체어타임이 길다”는 문제도, 기준 없이 “빨리 끝내”라고 하면 갈등이 되고, 함께 원인을 보고 기준을 정하면 개선이 됩니다.
+        </div>
+      </div>
+    </article>
+
+    <article class="chapter">
+      <div class="ch-num">CH 5</div>
+      <div class="ch-body">
+        <h3>압도적 1등 병원의 성과 관리법</h3>
+        <blockquote class="pull">
+          실적은 ‘얼마나 많이 했는가’를 말해주고, 성과는 ‘얼마나 <em>의미 있게 변화했는가</em>’를 보여준다.
+          <cite>본문 p.253 요지</cite>
+        </blockquote>
+        <p>실적 중심으로 평가하면 숫자를 맞추기 위한 형식적 반복이 생기고, 성과 중심으로 평가하면 변화의 방향과 질을 보게 되어 지속 가능한 성장이 만들어진다는 게 저자의 구분입니다.</p>
+        <ul class="pts">
+          <li><b>SMART하게 세우고, 월 → 주 → 일로 쪼갭니다.</b> 그리고 반드시 점검 회의로 닫습니다. 세우기만 하고 점검하지 않으면 목표가 아니라 선언입니다.</li>
+          <li><b>목표는 본인이 정하게 합니다.</b> 책이 소개하는 한 원장은 주 30분 1:1에서 직원이 스스로 정한 목표를 — 그게 ‘주 10분 산책’이라 해도 — 존중하고 격려합니다. 70%만 해도 “잘했다”로 받고 다음 주를 같이 정합니다.</li>
+          <li><b>성장의 기준은 리더가 아니라 본인이 세웁니다.</b> 리더는 촉진제만 얹습니다. 많이 시켜서 익숙해지는 성장은 초반엔 되지만 길게는 장애가 됩니다.</li>
+        </ul>
+      </div>
+    </article>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">03</span>
+      <h2>외워 두면 바로 쓰는 도구 4가지</h2>
+    </div>
+    <p class="lede">책의 강점은 프레임워크를 상황에 맞게 배치해 준다는 점입니다. 이 네 개만 알아도 절반은 가져간 겁니다.</p>
+    <div class="fw-grid">
+
+      <div class="fw">
+        <h4><span class="code">4W</span> 치료계획 설명</h4>
+        <p>고객이 이해하고 스스로 고르게 만드는 설명 순서입니다. 상담 동의율에 직접 영향을 줍니다.</p>
+        <ol class="steps">
+          <li><b>WHY</b> — 지금 무엇이 문제인지 규명</li>
+          <li><b>WHY SO</b> — 왜 그렇게 됐는지 원인</li>
+          <li><b>WHAT</b> — 원인을 해결할 제안</li>
+          <li><b>WHAT’S BETTER</b> — 대안을 비교해 최선을 고르게</li>
+        </ol>
+      </div>
+
+      <div class="fw">
+        <h4><span class="code">AIDA</span> 신환 유입 흐름</h4>
+        <p>예약은 갑자기 생기지 않습니다. 각 단계마다 우리가 놓아둔 것이 있어야 다음으로 넘어갑니다.</p>
+        <ol class="steps">
+          <li><b>인지</b> — 존재를 알게 됨(검색·간판·소개)</li>
+          <li><b>관심</b> — 내 문제와 연결됨(콘텐츠·리뷰)</li>
+          <li><b>고려</b> — 비교 대상에 들어감(후기·가격·거리)</li>
+          <li><b>예약</b> — 행동(카톡·전화·네이버 예약)</li>
+        </ol>
+      </div>
+
+      <div class="fw">
+        <h4><span class="code">VOC</span> 불만 처리 우선순위</h4>
+        <p>모든 불만을 동시에 고칠 수는 없습니다. 두 축으로 줄을 세웁니다.</p>
+        <ol class="steps">
+          <li><b>빈도</b> — 자주 반복되는 문제 먼저</li>
+          <li><b>위험도</b> — 사고·법적·신뢰 손상 위험이 큰 것 먼저</li>
+          <li><b>원인 제거</b> — 응대로 덮지 말고 구조를 고치기</li>
+        </ol>
+      </div>
+
+      <div class="fw">
+        <h4><span class="code">STP</span> 우리 자리 정하기</h4>
+        <p>“모두를 위한 병원”은 아무에게도 선택되지 않습니다. 자리를 좁혀야 1등이 됩니다.</p>
+        <ol class="steps">
+          <li><b>Segmentation</b> — 고객을 의미 있게 나누고</li>
+          <li><b>Targeting</b> — 우리가 가장 잘할 그룹을 고르고</li>
+          <li><b>Positioning</b> — 그들 머릿속에 한 문장으로 자리 잡기</li>
+        </ol>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">04</span>
+      <h2>내 자리에서는 뭐가 달라지나</h2>
+    </div>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">역할</th>
+            <th scope="col">이 책이 말하는 핵심 임무</th>
+            <th scope="col">당장 바꿀 한 가지</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">데스크 · 접수</th>
+            <td>브랜드의 첫 문장이자 마지막 문장. 전화·카톡 응대와 대기 안내가 곧 인지→예약 구간의 마감 담당.</td>
+            <td>대기 시간이 밀릴 때 먼저 가서 <b>남은 시간을 알려주기</b>. 침묵이 가장 나쁜 응대입니다.</td>
+          </tr>
+          <tr>
+            <th scope="row">진료실 스태프</th>
+            <td>체어 위의 온도·목소리·공감이 그대로 브랜드 경험. ‘어정쩡한 친절’이 가장 잘 드러나는 자리.</td>
+            <td>처치 직전 <b>“지금부터 ○○ 할게요”</b> 예고 한마디. 예고는 통증보다 불안을 줄입니다.</td>
+          </tr>
+          <tr>
+            <th scope="row">상담 · 실장</th>
+            <td>설명을 구조로 만드는 자리. 4W 순서와 할인·예외의 명문화된 기준이 핵심.</td>
+            <td>미동의 건의 <b>사유를 한 줄로 기록</b>해 VOC로 올리기. 가격 문제인지 설명 문제인지가 갈립니다.</td>
+          </tr>
+          <tr>
+            <th scope="row">원장 · 관리자</th>
+            <td>기준을 먼저 제시하는 사람. 마이크로매니징 대신 방향과 선을 주고, 실적이 아닌 성과로 평가.</td>
+            <td>주 1회 <b>10~30분 1:1</b>에서 본인이 정한 목표를 듣고 존중하기.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">05</span>
+      <h2>이번 주 체크리스트</h2>
+    </div>
+    <p class="lede">책 한 권을 다 적용할 필요는 없습니다. 아래 여섯 개 중 두세 개만 이번 주에 해봐도 차이가 보입니다.</p>
+    <ul class="checks">
+      <li><b>우리 병원을 한 문장으로</b> 적어 보기 — 다 같이 적어서 문장이 서로 다르면, 그게 브랜딩이 없다는 증거입니다.</li>
+      <li><b>상담 스크립트에서 특징 문장 3개를 혜택 문장으로</b> 고쳐 쓰기.</li>
+      <li>최근 한 달 <b>같은 불만이 두 번 이상 나온 항목</b>을 찾아 원인 한 줄로 정리하기.</li>
+      <li>치료계획 설명 한 건을 <b>4W 순서대로</b> 해보고 반응 비교하기.</li>
+      <li><b>할인·예외 기준</b>을 문서 한 장으로 못 박기 — 기분이 아니라 규정으로.</li>
+      <li>시술 후 <b>홈케어 안내 문구</b>를 표준화하고, 다음 내원 전 변화 체크 한 번.</li>
+    </ul>
+  </section>
+
+  <p class="note">
+    <b>이 요약본에 대해.</b> 원문 전체를 직접 읽고 정리한 것이 아니라, 출발점이 된 <a href="https://blog.naver.com/chosungwoo0113/224215098382" target="_blank" rel="noopener">해당 블로그 서평</a>과 공개된 다른 서평 20여 편을 교차 확인해 재구성한 것입니다. 챕터 구성과 프레임워크(4W·AIDA·STP·VOC·SMART), 인용 문장의 페이지 표기는 서평들에서 일관되게 확인된 내용이고, ‘우리 병원에서는 / 당장 바꿀 한 가지’ 항목은 책의 원문이 아니라 <b>치과 현장에 맞춰 새로 쓴 적용 제안</b>입니다. 세부 수치·워크시트 양식 등 실무에 그대로 쓰려면 원서를 구해 확인하시길 권합니다.
+  </p>
+
+</div>
+</body>
+</html>
